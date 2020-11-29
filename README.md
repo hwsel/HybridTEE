@@ -4,7 +4,7 @@
 The system is developed under Ubuntu 18.04.4, SGX Linux 2.11, and OPTEE 3.8.0. 
 
 #### Prepare for the HybridTEE environment
-  1. Copy the `darknet_SGX` folder to `sgx/SampleCode/` directory, and build the `darknet_SGX`.
+  1. Copy the `darknet_SGX` folder to `sgx/SampleCode/` directory. Copy all the folders in the `model_info` folder into the `darknet_SGX` directory. Build the `darknet_SGX`.
   
     ```
     cd SampleCode/darknet_SGX
@@ -102,7 +102,7 @@ The system is developed under Ubuntu 18.04.4, SGX Linux 2.11, and OPTEE 3.8.0.
    5. Open a second terminal and navigate to `sgx/SampleCode/darknet_SGX` directory.
   
 #### Run the HybridTEE system. 
-Here is an example to run Darknet19 with the eagle image in the HybridTEE system. Assume the total layers that run in the OPTEE are 5 (the first 4 layers + the last layer). The ``-gpp`` flag and the ``-st`` indicate the number of first layers running in the OPTEE. To run other models or the other images, change the cfg, the weights, and the input image files, respectively. 
+Here is an example to run Darknet19 with the eagle image in the HybridTEE system. Assume the total layers that run in the OPTEE are 5 (the first 4 layers + the last layer). The ``-gpp`` flag and the ``-st`` indicate the number of first layers running in the OPTEE. To run other models or the other images, change the cfg, the weights, and the input image files, respectively. Note that the height and the width in the cfg files in the SGX and the OPTEE should be 128 for both (the larger image size might make the OPTEE application fail to run). 
   1. Start the system from the SGX first:
          
     ```
@@ -116,3 +116,18 @@ Here is an example to run Darknet19 with the eagle image in the HybridTEE system
 
   3. The entire system starts with remote attestation and run the Darknet inference. Final inference can be seen on the OPTEE console.
    
+#### Run Darknet Baseline in the OPTEE Only
+  1. Copy the `darknet_baseline` folder into the `optee/optee_examples` directory
+   
+  2. Copy all the folders in the `model_info` folder into the `optee/out-br/target/root/` directory. 
+  
+  3. Rebuild the optee system and generate the SD card image
+  
+  4. After boot the OPTEE system with the current SD card image, run the `darknet_baseline`:
+  
+    ```
+    darknet_baseline classifier predict cfg/imagenet1k.data cfg/darknet19.cfg darknet19.weights data/eagle.jpg
+    ```
+
+#### Partition Point: Using the Auxiliary DNN Model and SIFT Object Detection Methods
+
