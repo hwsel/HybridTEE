@@ -1,0 +1,223 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AES_BLOCK_SIZE	aes.h	18;"	d
+AES_COMMON_H	aes-common.h	14;"	d
+AES_DEBUG	aes-debug.c	11;"	d	file:
+AES_DEBUG	aes-gcm-test.c	5;"	d	file:
+AES_DEBUG_H	aes-debug.h	12;"	d
+AES_FULL_UNROLL	aes.h	16;"	d
+AES_GET_BE16	aes-common.h	/^static inline aes_ushort AES_GET_BE16(const aes_uchar *a)$/;"	f
+AES_GET_BE24	aes-common.h	/^static inline aes_uint AES_GET_BE24(const aes_uchar *a)$/;"	f
+AES_GET_BE32	aes-common.h	/^static inline aes_uint AES_GET_BE32(const aes_uchar *a)$/;"	f
+AES_GET_BE64	aes-common.h	/^static inline aes_ulong AES_GET_BE64(const aes_uchar *a)$/;"	f
+AES_GET_LE16	aes-common.h	/^static inline aes_ushort AES_GET_LE16(const aes_uchar *a)$/;"	f
+AES_GET_LE32	aes-common.h	/^static inline aes_uint AES_GET_LE32(const aes_uchar *a)$/;"	f
+AES_GET_LE64	aes-common.h	/^static inline aes_ulong AES_GET_LE64(const aes_uchar *a)$/;"	f
+AES_H	aes.h	10;"	d
+AES_INTERNAL_H	aes-internal.h	10;"	d
+AES_PRIV_NR_POS	aes-internal.h	114;"	d
+AES_PRIV_SIZE	aes-internal.h	113;"	d
+AES_PUT_BE16	aes-common.h	/^static inline void AES_PUT_BE16(aes_uchar *a, aes_ushort val)$/;"	f
+AES_PUT_BE24	aes-common.h	/^static inline void AES_PUT_BE24(aes_uchar *a, aes_uint val)$/;"	f
+AES_PUT_BE32	aes-common.h	/^static inline void AES_PUT_BE32(aes_uchar *a, aes_uint val)$/;"	f
+AES_PUT_BE64	aes-common.h	/^static inline void AES_PUT_BE64(aes_uchar *a, aes_ulong val)$/;"	f
+AES_PUT_LE16	aes-common.h	/^static inline void AES_PUT_LE16(aes_uchar *a, aes_ushort val)$/;"	f
+AES_PUT_LE32	aes-common.h	/^static inline void AES_PUT_LE32(aes_uchar *a, aes_uint val)$/;"	f
+AES_PUT_LE64	aes-common.h	/^static inline void AES_PUT_LE64(aes_uchar *a, aes_ulong val)$/;"	f
+AES_SMALL_TABLES	aes.h	17;"	d
+AES_WARN_UNUSED_RESULT	aes-common.h	252;"	d
+AES_WARN_UNUSED_RESULT	aes-common.h	254;"	d
+DELTA_EPOCH_IN_MICROSECS	aes-debug.c	/^const __int64 DELTA_EPOCH_IN_MICROSECS= 11644473600000000;$/;"	v
+GETU32	aes-internal.h	103;"	d
+MSG_DEBUG	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+MSG_ERROR	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+MSG_EXCESSIVE	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+MSG_INFO	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+MSG_MSGDUMP	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+MSG_WARNING	aes-debug.h	/^	MSG_EXCESSIVE, MSG_MSGDUMP, MSG_DEBUG, MSG_INFO, MSG_WARNING, MSG_ERROR$/;"	e	enum:__anon1
+PUTU32	aes-internal.h	107;"	d
+RCON	aes-internal.h	28;"	d
+RCON	aes-internal.h	63;"	d
+ROUND	aes-internal-enc.c	109;"	d	file:
+ROUND	aes-internal-enc.c	151;"	d	file:
+TD0	aes-internal.h	48;"	d
+TD0	aes-internal.h	88;"	d
+TD0_	aes-internal.h	56;"	d
+TD0_	aes-internal.h	96;"	d
+TD1	aes-internal.h	49;"	d
+TD1	aes-internal.h	89;"	d
+TD1_	aes-internal.h	57;"	d
+TD1_	aes-internal.h	97;"	d
+TD2	aes-internal.h	50;"	d
+TD2	aes-internal.h	90;"	d
+TD2_	aes-internal.h	58;"	d
+TD2_	aes-internal.h	98;"	d
+TD3	aes-internal.h	51;"	d
+TD3	aes-internal.h	91;"	d
+TD3_	aes-internal.h	59;"	d
+TD3_	aes-internal.h	99;"	d
+TD41	aes-internal.h	52;"	d
+TD41	aes-internal.h	92;"	d
+TD42	aes-internal.h	53;"	d
+TD42	aes-internal.h	93;"	d
+TD43	aes-internal.h	54;"	d
+TD43	aes-internal.h	94;"	d
+TD44	aes-internal.h	55;"	d
+TD44	aes-internal.h	95;"	d
+TE0	aes-internal.h	30;"	d
+TE0	aes-internal.h	70;"	d
+TE1	aes-internal.h	31;"	d
+TE1	aes-internal.h	71;"	d
+TE2	aes-internal.h	32;"	d
+TE2	aes-internal.h	72;"	d
+TE3	aes-internal.h	33;"	d
+TE3	aes-internal.h	73;"	d
+TE4	aes-internal.h	46;"	d
+TE4	aes-internal.h	86;"	d
+TE41	aes-internal.h	34;"	d
+TE41	aes-internal.h	74;"	d
+TE411	aes-internal.h	42;"	d
+TE411	aes-internal.h	82;"	d
+TE414	aes-internal.h	41;"	d
+TE414	aes-internal.h	81;"	d
+TE42	aes-internal.h	35;"	d
+TE42	aes-internal.h	75;"	d
+TE421	aes-internal.h	38;"	d
+TE421	aes-internal.h	78;"	d
+TE422	aes-internal.h	43;"	d
+TE422	aes-internal.h	83;"	d
+TE43	aes-internal.h	36;"	d
+TE43	aes-internal.h	76;"	d
+TE432	aes-internal.h	39;"	d
+TE432	aes-internal.h	79;"	d
+TE433	aes-internal.h	44;"	d
+TE433	aes-internal.h	84;"	d
+TE44	aes-internal.h	37;"	d
+TE44	aes-internal.h	77;"	d
+TE443	aes-internal.h	40;"	d
+TE443	aes-internal.h	80;"	d
+TE444	aes-internal.h	45;"	d
+TE444	aes-internal.h	85;"	d
+Td0	aes-internal.c	/^const aes_uint Td0[256] = {$/;"	v
+Td1	aes-internal.c	/^const aes_uint Td1[256] = {$/;"	v
+Td2	aes-internal.c	/^const aes_uint Td2[256] = {$/;"	v
+Td3	aes-internal.c	/^const aes_uint Td3[256] = {$/;"	v
+Td4	aes-internal.c	/^const aes_uint Td4[256] = {$/;"	v
+Td4s	aes-internal.c	/^const aes_uchar Td4s[256] = {$/;"	v
+Te0	aes-internal.c	/^const aes_uint Te0[256] = {$/;"	v
+Te1	aes-internal.c	/^const aes_uint Te1[256] = {$/;"	v
+Te2	aes-internal.c	/^const aes_uint Te2[256] = {$/;"	v
+Te3	aes-internal.c	/^const aes_uint Te3[256] = {$/;"	v
+Te4	aes-internal.c	/^const aes_uint Te4[256] = {$/;"	v
+__BIG_ENDIAN	aes-common.h	48;"	d
+__BIG_ENDIAN	aes-common.h	55;"	d
+__BIG_ENDIAN	aes-common.h	66;"	d
+__BIG_ENDIAN	aes-common.h	75;"	d
+__BYTE_ORDER	aes-common.h	46;"	d
+__BYTE_ORDER	aes-common.h	57;"	d
+__BYTE_ORDER	aes-common.h	59;"	d
+__BYTE_ORDER	aes-common.h	67;"	d
+__BYTE_ORDER	aes-common.h	73;"	d
+__ENDIAN_LITTLE__	aes-common.h	114;"	d
+__LITTLE_ENDIAN	aes-common.h	47;"	d
+__LITTLE_ENDIAN	aes-common.h	54;"	d
+__LITTLE_ENDIAN	aes-common.h	65;"	d
+__LITTLE_ENDIAN	aes-common.h	74;"	d
+_aes_hexdump	aes-debug.c	/^static void _aes_hexdump(int level, const char *title, const aes_uchar *buf,$/;"	f	file:
+_aes_hexdump_ascii	aes-debug.c	/^static void _aes_hexdump_ascii(int level, const char *title, const void *buf,$/;"	f	file:
+aes_char	aes-common.h	/^typedef signed char         aes_char;$/;"	t
+aes_dbg	aes-debug.h	55;"	d
+aes_debug_level	aes-debug.c	/^int aes_debug_level = MSG_EXCESSIVE;$/;"	v
+aes_debug_print_timestamp	aes-debug.c	/^void aes_debug_print_timestamp(void)$/;"	f
+aes_debug_print_timestamp	aes-debug.h	47;"	d
+aes_debug_show_keys	aes-debug.c	/^int aes_debug_show_keys = 1;$/;"	v
+aes_debug_timestamp	aes-debug.c	/^int aes_debug_timestamp = 1;$/;"	v
+aes_encrypt	aes-internal-enc.c	/^void aes_encrypt(void *ctx, const aes_uchar *plain, aes_uchar *crypt)$/;"	f
+aes_encrypt_deinit	aes-internal-enc.c	/^void aes_encrypt_deinit(void *ctx)$/;"	f
+aes_encrypt_init	aes-internal-enc.c	/^void * aes_encrypt_init(const aes_uchar *key, size_t len)$/;"	f
+aes_gcm_ad	aes-gcm.c	/^int aes_gcm_ad(const aes_uchar *key, size_t key_len, const aes_uchar *iv, size_t iv_len,$/;"	f
+aes_gcm_ae	aes-gcm.c	/^int aes_gcm_ae(const aes_uchar *key, size_t key_len, const aes_uchar *iv, size_t iv_len,$/;"	f
+aes_gcm_gctr	aes-gcm.c	/^static void aes_gcm_gctr(void *aes, const aes_uchar *J0, const aes_uchar *in, size_t len,$/;"	f	file:
+aes_gcm_ghash	aes-gcm.c	/^static void aes_gcm_ghash(const aes_uchar *H, const aes_uchar *aad, size_t aad_len,$/;"	f	file:
+aes_gcm_init_hash_subkey	aes-gcm.c	/^static void * aes_gcm_init_hash_subkey(const aes_uchar *key, size_t key_len, aes_uchar *H)$/;"	f	file:
+aes_gcm_prepare_j0	aes-gcm.c	/^static void aes_gcm_prepare_j0(const aes_uchar *iv, size_t iv_len, const aes_uchar *H, aes_uchar *J0)$/;"	f	file:
+aes_gctr	aes-gcm.c	/^static void aes_gctr(void *aes, const aes_uchar *icb, const aes_uchar *x, size_t xlen, aes_uchar *y)$/;"	f	file:
+aes_gmac	aes-gcm.c	/^int aes_gmac(const aes_uchar *key, size_t key_len, const aes_uchar *iv, size_t iv_len,$/;"	f
+aes_hexdump	aes-debug.c	/^void aes_hexdump(int level, const char *title, const void *buf, size_t len)$/;"	f
+aes_hexdump	aes-debug.h	49;"	d
+aes_hexdump_ascii	aes-debug.c	/^void aes_hexdump_ascii(int level, const char *title, const void *buf,$/;"	f
+aes_hexdump_ascii	aes-debug.h	53;"	d
+aes_hexdump_ascii_key	aes-debug.c	/^void aes_hexdump_ascii_key(int level, const char *title, const void *buf,$/;"	f
+aes_hexdump_ascii_key	aes-debug.h	54;"	d
+aes_hexdump_buf	aes-debug.h	50;"	d
+aes_hexdump_buf_key	aes-debug.h	52;"	d
+aes_hexdump_key	aes-debug.c	/^void aes_hexdump_key(int level, const char *title, const void *buf, size_t len)$/;"	f
+aes_hexdump_key	aes-debug.h	51;"	d
+aes_int	aes-common.h	/^typedef signed int          aes_int;$/;"	t
+aes_long	aes-common.h	/^typedef signed long long    aes_long;$/;"	t
+aes_printf	aes-debug.c	/^void aes_printf(int level, const char *fmt, ...)$/;"	f
+aes_printf	aes-debug.h	48;"	d
+aes_rijndael_encrypt	aes-internal-enc.c	/^void aes_rijndael_encrypt(const aes_uint rk[], int Nr, const aes_uchar pt[16], aes_uchar ct[16])$/;"	f
+aes_rijndael_key_setup_enc	aes-internal-enc.c	/^int aes_rijndael_key_setup_enc(aes_uint rk[], const aes_uchar cipherKey[], size_t keyBits)$/;"	f
+aes_short	aes-common.h	/^typedef signed short        aes_short;$/;"	t
+aes_uchar	aes-common.h	/^typedef unsigned char       aes_uchar;$/;"	t
+aes_uint	aes-common.h	/^typedef unsigned int        aes_uint;$/;"	t
+aes_ulong	aes-common.h	/^typedef unsigned long long  aes_ulong;$/;"	t
+aes_ushort	aes-common.h	/^typedef unsigned short      aes_ushort;$/;"	t
+be_to_host16	aes-common.h	117;"	d
+be_to_host16	aes-common.h	130;"	d
+be_to_host32	aes-common.h	121;"	d
+be_to_host32	aes-common.h	134;"	d
+be_to_host64	aes-common.h	125;"	d
+be_to_host64	aes-common.h	138;"	d
+bswap_16	aes-common.h	82;"	d
+bswap_32	aes-common.h	88;"	d
+bswap_32	aes-common.h	90;"	d
+bswap_64	aes-common.h	101;"	d
+bswap_64	aes-common.h	99;"	d
+gettimeofday	aes-debug.c	/^int gettimeofday(struct timeval *tv, struct timezone *tz)$/;"	f
+gf_mult	aes-gcm.c	/^static void gf_mult(const aes_uchar *x, const aes_uchar *y, aes_uchar *z)$/;"	f	file:
+ghash	aes-gcm.c	/^static void ghash(const aes_uchar *h, const aes_uchar *x, size_t xlen, aes_uchar *y)$/;"	f	file:
+ghash_start	aes-gcm.c	/^static void ghash_start(aes_uchar *y)$/;"	f	file:
+host_to_be16	aes-common.h	118;"	d
+host_to_be16	aes-common.h	131;"	d
+host_to_be32	aes-common.h	122;"	d
+host_to_be32	aes-common.h	135;"	d
+host_to_be64	aes-common.h	126;"	d
+host_to_be64	aes-common.h	139;"	d
+host_to_le16	aes-common.h	116;"	d
+host_to_le16	aes-common.h	129;"	d
+host_to_le32	aes-common.h	120;"	d
+host_to_le32	aes-common.h	133;"	d
+host_to_le64	aes-common.h	124;"	d
+host_to_le64	aes-common.h	137;"	d
+inc32	aes-gcm.c	/^static void inc32(aes_uchar *block)$/;"	f	file:
+inline	aes-common.h	64;"	d
+le_to_host16	aes-common.h	115;"	d
+le_to_host16	aes-common.h	128;"	d
+le_to_host32	aes-common.h	119;"	d
+le_to_host32	aes-common.h	132;"	d
+le_to_host64	aes-common.h	123;"	d
+le_to_host64	aes-common.h	136;"	d
+main	aes-gcm-test.c	/^int main(int argc, const char **argv)$/;"	f
+rcon	aes-internal.c	/^const aes_uint rcon[] = {$/;"	v
+rcons	aes-internal.c	/^const aes_uchar rcons[] = {$/;"	v
+rotr	aes-internal.h	/^static inline aes_uint rotr(aes_uint val, int bits)$/;"	f
+shift_right_block	aes-gcm.c	/^static void shift_right_block(aes_uchar *v)$/;"	f	file:
+t3_aad	aes-gcm-test.c	/^const unsigned char t3_aad[] = {};$/;"	v
+t3_crypt	aes-gcm-test.c	/^const unsigned char t3_crypt[] = {$/;"	v
+t3_iv	aes-gcm-test.c	/^const unsigned char t3_iv[] = {$/;"	v
+t3_key	aes-gcm-test.c	/^const unsigned char t3_key[] = {$/;"	v
+t3_plain	aes-gcm-test.c	/^const float t3_plain[] = {0.55, 0.64, 0.47, 0.99, 5.77, 13.22, 5.44, 0.35, 1.23, 8.54};$/;"	v
+t3_tag	aes-gcm-test.c	/^const unsigned char t3_tag[] = {$/;"	v
+timeval	aes-debug.h	/^struct timeval {$/;"	s
+timezone	aes-debug.h	/^struct timezone$/;"	s
+tv_sec	aes-debug.h	/^    int    tv_sec;$/;"	m	struct:timeval
+tv_usec	aes-debug.h	/^    int    tv_usec;$/;"	m	struct:timeval
+tz_dsttime	aes-debug.h	/^    int     tz_dsttime;     \/* type of dst correction *\/$/;"	m	struct:timezone
+tz_minuteswest	aes-debug.h	/^    int     tz_minuteswest; \/* minutes west of Greenwich *\/$/;"	m	struct:timezone
+xor_block	aes-gcm.c	/^static void xor_block(aes_uchar *dst, const aes_uchar *src)$/;"	f	file:

@@ -1,0 +1,43 @@
+enclave {
+
+    trusted {
+        /* define ECALLs here. */
+
+	public int ecall_make_network(int n, float learning_rate, float momentum, float decay, int time_steps, int notruth, int batch, int subdivisions, int random, int adam, float B1, float B2, float eps, int h, int w, int c, int inputs, int max_crop, int min_crop, float max_ratio, float min_ratio, int center, float clip, float angle, float aspect, float saturation, float exposure, float hue, int burn_in, float power, int max_batches, int start_index); 
+        
+	public int ecall_make_convolutional_layer(int batch, int h, int w, int c, int n, int groups, int size, int stride, int padding, [in, size=acti_length]char *activation_s, int acti_length, int batch_normalize, int binary, int xnor, int adam, int flipped, float dot);
+
+	public int ecall_make_connected_layer(int batch, int inputs, int outputs, [in, size=acti_length]char *activation_s, int acti_length, int batch_normalize, int adam);
+
+	public int ecall_make_softmax_layer(int batch, int inputs, int groups, float temperature, int w, int h, int c, int spatial, int noloss);
+
+	public int ecall_make_cost_layer(int batch, int inputs, [in, size=cost_size]char *cost_type, int cost_size, float scale, float ratio, float noobject_scale, float thresh);
+	
+	public int ecall_make_maxpool_layer(int batch, int h, int w, int c, int size, int stride, int padding);
+
+	public int ecall_make_dropout_layer(int batch, int inputs, float probability, int w, int h, int c, [in, size=prev_size]float *net_prev_output, int prev_size, [in, size=delta_size]float *net_prev_delta, int delta_size);
+
+        public int ecall_make_avgpool_layer(int batch, int w, int h, int c);
+
+        public int ecall_allocate_workspace(int workspace_size);
+
+	public int ecall_transfer_weights([in, size=length]float *vec, int length, int layer_i, char type, int additional);
+
+	public int ecall_net_output_return([in, out, size=length]float *net_output, int length, [in, out, size=tag_length]uint8_t *tag_buffer, int tag_length);
+
+	public int ecall_forward_network([in, size=l_inputs]float *net_input, int l_inputs, [in, size=l_tag]uint8_t *tag_buffer, int l_tag, int net_train);
+
+        public int ecall_attest_session_token(int session_token, [in, out, size=attest_size]char *attestation_buffer, int attest_size, [in, out, size=l_tag]uint8_t *tag_buffer, int l_tag);
+
+        public int ecall_decrypt([in, size=input_length]uint32_t *encrypt_input, uint32_t input_length,
+                                    [out, size=output_length]uint32_t *plaintext_output, uint32_t output_length, [in, out, size=key_size]uint8_t *key, uint32_t key_size);
+
+	public int ecall_encrypt([in, size=input_length]uint32_t *plaintext_input, uint32_t input_length,
+                                    [out, size=output_length]uint32_t *encrypted_output, uint32_t output_length, [in, out, size=key_size]uint8_t *key, uint32_t key_size);
+    };
+
+    untrusted {
+        /* define OCALLs here. */
+        void ocall_print([in, string]const char* str, float value);
+    };
+};

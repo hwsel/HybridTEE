@@ -1,0 +1,8 @@
+classes=1000
+train  = /data/imagenet/imagenet1k.train.list
+valid  = /data/imagenet/imagenet1k.valid.list
+backup = /home/akshay/backup/
+labels = data/darknet/imagenet.labels.list
+names  = data/darknet/imagenet.shortnames.list
+top=5
+
