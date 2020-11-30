@@ -6,24 +6,24 @@ The system is developed under Ubuntu 18.04.4, SGX Linux 2.11, and OPTEE 3.8.0.
 #### Prepare for the HybridTEE environment
   1. Copy the `darknet_SGX` folder to `sgx/SampleCode/` directory. Copy all the folders in the `model_info` folder into the `darknet_SGX` directory. Build the `darknet_SGX`.
   
-    ```
-    cd SampleCode/darknet_SGX
-    sudo make SGX_MODE=HW
-    ```
+   ```
+   cd SampleCode/darknet_SGX
+   sudo make SGX_MODE=HW
+   ```
   
   2. Build the original optee system.
    
-    ```
-    mkdir optee_3.8.0
-    cd optee_3.8.0
-    repo init -u https://github.com/OP-TEE/manifest.git -m rpi3.xml -b 3.8.0
-    repo sync -j4 --no-clone-bundle
-    cd build
-    make -j2 toolchains
-    make -j `nproc`
-    ```
+   ```
+   mkdir optee_3.8.0
+   cd optee_3.8.0
+   repo init -u https://github.com/OP-TEE/manifest.git -m rpi3.xml -b 3.8.0
+   repo sync -j4 --no-clone-bundle
+   cd build
+   make -j2 toolchains
+   make -j `nproc`
+   ```
 
-  3. Copy the `darknetp_optee` folder into the `optee/optee_examples` directory
+  3. Copy the `darknetp_optee` folder into the `optee/optee_examples` directory.
    
   4. Copy all the folders in the `model_info` folder into the `optee/out-br/target/root/` directory. 
 
@@ -72,20 +72,20 @@ The system is developed under Ubuntu 18.04.4, SGX Linux 2.11, and OPTEE 3.8.0.
       #define TA_DATA_SIZE			(60 * 1024 * 1024)
       ```
       
-  6. Rebuild the optee system and generate the SD card image
+  6. Rebuild the optee system and generate the SD card image.
   
 #### Connect the OPTEE and SGX devices in the HybridTEE system
   1. Plug the SD card into the Raspberry pi. Connect an ethernet cable between the pi and the SGX machine. Connect a USB to UART cable between the pi and the SGX machine.
 
-  2. On the system terminal, run the command for the pi UART interface 
+  2. On the system terminal, run the command for the pi UART interface.
    
-    ```
-    picocom -b 115200 /dev/ttyUSB0
-    ```
+   ```
+   picocom -b 115200 /dev/ttyUSB0
+   ```
 
   3. Now supply power to the Raspberry pi and allow OPTEE to boot. You should see the booting sequence over the UART interface. Then type root and press enter.
 
-  4. Now setup the ethernet connection between the two devices using the following commands in the OPTEE terminal
+  4. Now setup the ethernet connection between the two devices using the following commands in the OPTEE terminal.
       
       ```
       ifconfig eth0 up
@@ -102,32 +102,45 @@ The system is developed under Ubuntu 18.04.4, SGX Linux 2.11, and OPTEE 3.8.0.
    5. Open a second terminal and navigate to `sgx/SampleCode/darknet_SGX` directory.
   
 #### Run the HybridTEE system. 
-Here is an example to run Darknet19 with the eagle image in the HybridTEE system. Assume the total layers that run in the OPTEE are 5 (the first 4 layers + the last layer). The ``-gpp`` flag and the ``-st`` indicate the number of first layers running in the OPTEE. To run other models or the other images, change the cfg, the weights, and the input image files, respectively. Note that the height and the width in the cfg files in the SGX and the OPTEE should be 128 for both (the larger image size might make the OPTEE application fail to run). 
+Here is an example to run Darknet19 with the eagle image in the HybridTEE system. Please download the weights file from [here](https://pjreddie.com/darknet/imagenet/) and place it into `model_info/models/darknet/` for both of the SGX and OPTEE folders. 
+Assume the total layers that run in the OPTEE are 5 (the first 4 layers + the last layer). The ``-gpp`` flag and the ``-st`` indicate the number of first layers running in the OPTEE. To run other models or the other images, change the cfg, the weights, and the input image files, respectively. Note that the height and the width in the cfg files in the SGX and the OPTEE should be 128 for both (the larger image size might make the OPTEE application fail to run). 
   1. Start the system from the SGX first:
          
-    ```
-    sudo ./app classifier predict cfg/imagenet1k.data cfg/darknet19.cfg models/darknet/darknet19.weights data/darknet/partial_outputs_trustzone.data data/darknet/filesize.txt data/darknet/tag_trustzone.data data/darknet/tag_size.txt -st 4
-    ```
+   ```
+   sudo ./app classifier predict cfg/imagenet1k.data cfg/darknet19.cfg models/darknet/darknet19.weights data/darknet/partial_outputs_trustzone.data data/darknet/filesize.txt data/darknet/tag_trustzone.data data/darknet/tag_size.txt -st 4
+   ```
   2. After you see that SGX waiting for data from OPTEE. Run the OPTEE application:
          
-    ```
-    darknetp classifier predict -pp 0 -gpp 4 cfg/imagenet1k.data cfg/darknet19.cfg models/darknet/darknet19.weights data/darknet/eagle.jpg
-    ```   
+   ```
+   darknetp classifier predict -pp 0 -gpp 4 cfg/imagenet1k.data cfg/darknet19.cfg models/darknet/darknet19.weights data/darknet/eagle.jpg
+   ```   
 
   3. The entire system starts with remote attestation and run the Darknet inference. Final inference can be seen on the OPTEE console.
    
 #### Run Darknet Baseline in the OPTEE Only
-  1. Copy the `darknet_baseline` folder into the `optee/optee_examples` directory
+  1. Copy the `darknet_baseline` folder into the `optee/optee_examples` directory.
    
   2. Copy all the folders in the `model_info` folder into the `optee/out-br/target/root/` directory. 
   
-  3. Rebuild the optee system and generate the SD card image
+  3. Rebuild the optee system and generate the SD card image.
   
   4. After boot the OPTEE system with the current SD card image, run the `darknet_baseline`:
   
-    ```
-    darknet_baseline classifier predict cfg/imagenet1k.data cfg/darknet19.cfg darknet19.weights data/eagle.jpg
-    ```
+   ```
+   darknet_baseline classifier predict cfg/imagenet1k.data cfg/darknet19.cfg darknet19.weights data/eagle.jpg
+   ```
 
 #### Partition Point: Using the Auxiliary DNN Model and SIFT Object Detection Methods
+1. Download the official darknet code from [here](https://pjreddie.com/darknet/imagenet/) and follow the instructions there to run the Darknet19 model.
 
+2. Modify the darknet code to save the intermediate outputs of the first 8 layers. Critical files to save the intermediate outputs are in the `darknetp_intermediate` folder. The name format for the intermediate outputs is ``$(image_name)_$(layer_number)_$(channel_number).jpg``. For example, ``giraffe_0_0.jpg`` means the output of the first layer and first channel for the griaffe image. 
+
+3. Now run the `object_detect.py` script with 5 image names as parameters. The test images are in the `testing_images` folder. The `$<DataSize>` evaluated in the paper includes 128, 256, and 448. The `$<ModelName>` evaluated in the paper includes darknet19, vgg16, resnet152, and googlenet. 
+
+  ```
+  python3 object_detect.py eagle.jpg dog.jpg cat.jpg horses.jpg giraffe.jpg $<DataSize> $<ModelName>
+  ```
+
+4. The test images are in the `testing_images` folder. 
+
+5. This script generates all the intermediate outputs of the first 8 layers for 5 images for both SIFT and YOLO object detection.
