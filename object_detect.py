@@ -12,7 +12,7 @@ import imagehash
 import xlsxwriter
 
 def generateYOLOexcelsheet(all_image_confidence_scores, data_size, model_type):
-    workbook = xlsxwriter.Workbook('/home/mengmei/Research/gitlab/hisa_trustzone/HybridTEE/results_log/excelsheets/'+data_size+'/Yolo_'+model_type+'.xlsx')
+    workbook = xlsxwriter.Workbook(data_size+'/Yolo_'+model_type+'.xlsx')
     worksheet = workbook.add_worksheet()
     bold = workbook.add_format({'bold': True})
     worksheet.write('A1', 'Image', bold)
@@ -28,7 +28,7 @@ def generateYOLOexcelsheet(all_image_confidence_scores, data_size, model_type):
 
 
 def generateSIFTexcelsheet(total_sift_dist, total_features, data_size, model_type):
-    workbook = xlsxwriter.Workbook('/home/mengmei/Research/gitlab/hisa_trustzone/HybridTEE/results_log/excelsheets/'+data_size+'/SIFT_'+model_type+'.xlsx')
+    workbook = xlsxwriter.Workbook(data_size+'/SIFT_'+model_type+'.xlsx')
     worksheet = workbook.add_worksheet()
     bold = workbook.add_format({'bold': True})
     worksheet.write('A1', 'Image', bold)
